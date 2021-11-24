@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LibraryApp.Views.CartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstCart" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ImageCell ImageSource="{Binding img}" Text="{Binding title}" Detail="{Binding price}" />-->
+                        <ViewCell>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding img}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                                <Label Text="{Binding title}" Grid.Row="0" Grid.Column="1" />
+                                <Label Text="{Binding price}" Grid.Row="1" Grid.Column="1" />
+                                <Button x:Name="delete" Text="Delete" CommandParameter="{Binding bID}" Clicked="delete_Clicked" 
+                                        Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"/>
+                            </Grid>
+                          
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label x:Name="amount" FontSize="Large" FontAttributes="Bold" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

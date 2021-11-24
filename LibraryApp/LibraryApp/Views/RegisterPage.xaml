@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LibraryApp.Views.RegisterPage"
+             Title="Register"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#ff3467</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" >
+                <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Library App" 
+                          BackgroundColor="{StaticResource primary}"
+                          TextColor="White" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+                <StackLayout Orientation="Horizontal" Padding="20,40,20,0">
+                    <Entry x:Name="firstname" HeightRequest="50" 
+                         HorizontalOptions="FillAndExpand"
+                         Placeholder="First Name">
+                       
+                    </Entry>
+
+                    <Entry x:Name="lastname" HeightRequest="50" 
+                                  HorizontalOptions="FillAndExpand"
+                                 Placeholder="Last Name">
+                        
+                    </Entry>
+                </StackLayout>
+
+                <Entry x:Name="username"  Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="Username">
+                 
+                </Entry>
+
+                <Entry  x:Name="password" Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password">
+                   
+                </Entry>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Are you Admin?" FontSize="18" Margin="20,0,20,0"
+                           Grid.Row="0" Grid.Column="0"/>
+
+                    <Switch x:Name="isAdminSwitch" IsToggled="True" Margin="20,0,20,0"
+                             Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+                <Button x:Name="register" Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Register"  
+                         BackgroundColor="Gray"
+                         HorizontalOptions="FillAndExpand"
+                        Clicked="register_Clicked"/>
+
+                <Label Margin="0,0,0,20" Text="I have an account" VerticalOptions="EndAndExpand"
+                        HorizontalOptions="Center" 
+                        TextColor="{StaticResource primary}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

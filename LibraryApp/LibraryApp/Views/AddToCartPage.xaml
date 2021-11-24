@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LibraryApp.Views.AddToCartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="bookImg" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                <Label x:Name="bookTitle" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                       FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                <Label x:Name="bookPrice" Grid.Row="2" Grid.Column="0"
+                    FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <Button Text="Thêm vào giỏ" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" 
+                        x:Name="addToCartBtn" Clicked="addToCartBtn_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
