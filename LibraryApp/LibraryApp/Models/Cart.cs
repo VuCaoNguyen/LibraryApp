@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 namespace LibraryApp.Models
 {
-   public class Cart
+    public class Cart
     {
         [PrimaryKey, AutoIncrement]
         public int cId { get; set; }

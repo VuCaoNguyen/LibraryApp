@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using LibraryApp.Models;
+using LibraryApp.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using LibraryApp.Services;
-using LibraryApp.Models;
-using LibraryApp.Views;
 namespace LibraryApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]

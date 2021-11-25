@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 namespace LibraryApp.Models
 {
-   public class Book
+    public class Book
     {
         [PrimaryKey, AutoIncrement]
         public int bID { get; set; }

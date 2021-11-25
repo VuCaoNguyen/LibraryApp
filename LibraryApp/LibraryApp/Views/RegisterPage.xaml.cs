@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using LibraryApp.Models;
+using LibraryApp.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using LibraryApp.Models;
-using LibraryApp.Services;
 namespace LibraryApp.Views
-   
+
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
@@ -22,7 +17,8 @@ namespace LibraryApp.Views
 
         private void register_Clicked(object sender, EventArgs e)
         {
-            if(firstname.Text == null) {
+            if (firstname.Text == null)
+            {
                 DisplayAlert("Thông báo", "Nhập firstname", "OK");
                 firstname.Focus();
             }
@@ -69,10 +65,10 @@ namespace LibraryApp.Views
                 }
 
 
-               
+
             }
-           
-           
+
+
         }
     }
 }

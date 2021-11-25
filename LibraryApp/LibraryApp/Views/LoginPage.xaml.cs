@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using LibraryApp.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using LibraryApp.Models;
-using LibraryApp.Services;
 namespace LibraryApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -25,11 +19,12 @@ namespace LibraryApp.Views
 
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
-           if(username.Text == null)
+            if (username.Text == null)
             {
                 DisplayAlert("Thông báo", "Nhập username", "OK");
                 username.Focus();
-            } else if (password.Text == null)
+            }
+            else if (password.Text == null)
             {
                 DisplayAlert("Thông báo", "Nhập password", "OK");
                 password.Focus();
@@ -37,7 +32,7 @@ namespace LibraryApp.Views
             else
             {
                 DataBase db = new DataBase();
-                if(db.CheckUser(username.Text, password.Text))
+                if (db.CheckUser(username.Text, password.Text))
                 {
                     DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
 

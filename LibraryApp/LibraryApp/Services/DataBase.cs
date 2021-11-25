@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LibraryApp.Models;
 using SQLite;
-using LibraryApp.Models;
+using System;
+using System.Collections.Generic;
 namespace LibraryApp.Services
 {
     public class DataBase
@@ -47,8 +46,8 @@ namespace LibraryApp.Services
             {
                 string path = System.IO.Path.Combine(folder, "librarydb.db");
                 var connection = new SQLiteConnection(path);
-               List<User> users =  connection.Query<User>("select * from User where UserName= ? AND PassWord = ? ", new string[2] { username , password});
-               Console.WriteLine(users[0].Name);
+                List<User> users = connection.Query<User>("select * from User where UserName= ? AND PassWord = ? ", new string[2] { username, password });
+                Console.WriteLine(users[0].Name);
                 return true;
             }
             catch (Exception)
@@ -58,13 +57,13 @@ namespace LibraryApp.Services
         }
         public bool CheckRoleAdmin(string username, string password)
         {
-           
+
             string path = System.IO.Path.Combine(folder, "librarydb.db");
             var connection = new SQLiteConnection(path);
             List<User> users = connection.Query<User>("select * from User where UserName= ? AND PassWord = ? ", new string[2] { username, password });
             Console.WriteLine(users[0].Admin);
             return users[0].Admin;
-           
+
         }
 
         public bool AddBook(Book book)

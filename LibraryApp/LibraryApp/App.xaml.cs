@@ -1,8 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using LibraryApp.Services;
 using LibraryApp.Views;
-using LibraryApp.Services;
+using Xamarin.Forms;
 namespace LibraryApp
 {
     public partial class App : Application
